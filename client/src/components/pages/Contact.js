@@ -71,14 +71,17 @@ function Contact() {
   }
 
   return (
-    <div className="container" style={{ maxWidth: "100vmin" }}>
+    <div className="container" style={{ 
+      marginTop:'2.70vmin',
+      marginBottom:'5vmin',
+      }}>
       {submitted ? (
         <h4>
           Thank you for your message, we'll get back to you soon!
         </h4>
       ) : (
         <>
-           <div className='container d-flex justify-content-center'> 
+      <div className='container d-flex justify-content-center'> 
       <div className='container' style={{ maxWidth: "95vmin"}}>
       <div className='row align-items-center'>
       <div> 

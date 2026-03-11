@@ -25,7 +25,6 @@ function WebDev() {
         the use of several technologies, these are only a few examples of Nicholas'
         proficiencies. To see more of Nicholas' apps, visit 
         their <a href="https://github.com/MogleyBear06" target="_blank" rel="noopener noreferrer">GitHub</a> 
-! 
       </p>
       </div>
       <br></br>

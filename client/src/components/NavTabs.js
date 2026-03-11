@@ -4,30 +4,26 @@ import { Nav, Navbar} from "react-bootstrap";
 function NavTabs({ currentPage, handlePageChange }) {
   return (
     <Navbar collapseOnSelect expand="xxl"variant="dark">
-  <Navbar.Brand href="#home"
-          onClick={() => handlePageChange('Home')}
-          className= {currentPage === 'Home' ? 'nav-link active' : 'nav-link'} style={{fontSize: "4vmin",  flex: '0 0 auto',}}> 
-          MBK Consulting
-     </Navbar.Brand>
+ 
      <Navbar.Toggle aria-controls="responsive-navbar-nav" /> 
      <Navbar.Collapse id="responsive-navbar-nav">
-      <Nav className="mr-auto">
-        <Nav.Link  href="#home"
+      <Nav>
+        <Nav.Link  href="/"
           onClick={() => handlePageChange('Home')}
           className={currentPage === 'Home' ? 'nav-link active' : 'nav-link'} style={{fontSize: "2vmin",  flex: '0 0 auto',}}>
             Home 
         </Nav.Link>
-        <Nav.Link href="#Services"
+        <Nav.Link href="/Services"
           onClick={() => handlePageChange('Services')}
           className={currentPage === 'Services' ? 'nav-link active' : 'nav-link'} style={{fontSize: "2vmin",  flex: '0 0 auto'}}>
            Services
         </Nav.Link>
-        <Nav.Link  href="#about"
+        <Nav.Link  href="/About"
           onClick={() => handlePageChange('About')}
           className={currentPage === 'About' ? 'nav-link active' : 'nav-link'} style={{fontSize: "2vmin",  flex: '0 0 auto'}}>
           About
         </Nav.Link>
-        <Nav.Link  href="#contact"
+        <Nav.Link  href="/Contact"
           onClick={() => handlePageChange('Contact')}
           className={currentPage === 'Contact' ? 'nav-link active' : 'nav-link'} style={{fontSize: "2vmin",  flex: '0 0 auto'}}>
           Contact

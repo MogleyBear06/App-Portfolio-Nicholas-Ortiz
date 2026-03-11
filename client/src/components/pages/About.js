@@ -1,10 +1,14 @@
 import React from 'react';
-import nick from '../../assets/hs3.png';
+import nick from '../../assets/Nicholas_James_Ortiz3.jpeg';
 
 export default function About() {
   return (
     <> 
-    <div className="container" > 
+    <div className="container" 
+    style={{ 
+      marginTop:'2.70vmin',
+      marginBottom:'5vmin',
+      }}> 
     <div className='container'>
       <div>
       <h2 className="d-flex justify-content-center">About Us</h2>

@@ -1,13 +1,17 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
-import 'bootstrap/dist/css/bootstrap.min.css';
+import TagManager from 'react-gtm-module';
 
-import { BrowserRouter } from 'react-router-dom';
+const tagManagerArgs = {
+  gtmId: 'GTM-T2KHX283'
+}
+
+TagManager.initialize(tagManagerArgs)
 
 ReactDOM.render(
-  <BrowserRouter basename={process.env.PUBLIC_URL}>
+  <React.StrictMode>
     <App />
-  </BrowserRouter>,
+  </React.StrictMode>,
   document.getElementById('root')
 );
