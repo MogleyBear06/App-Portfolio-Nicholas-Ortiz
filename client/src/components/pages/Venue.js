@@ -40,7 +40,7 @@ export default function Venue() {
     <div className="container" 
     style={{ 
       marginTop:'2.70vmin',
-      marginBottom:'5vmin',
+      
       }}> 
          <img src={maininterior} alt=""
            style={{

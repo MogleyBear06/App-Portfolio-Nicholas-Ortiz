@@ -41,7 +41,7 @@ export default function FAQ() {
     <div className="container" 
     style={{ 
       marginTop:'2.70vmin',
-      marginBottom:'5vmin',
+      
       }}> 
          <img src={dock} alt=""
            style={{

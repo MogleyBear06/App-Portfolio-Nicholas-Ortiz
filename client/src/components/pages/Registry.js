@@ -41,7 +41,7 @@ export default function Registry() {
     <div className="container" 
     style={{ 
       marginTop:'2.70vmin',
-      marginBottom:'20vmin',
+      
       }}> 
          <img src={hands} alt=""
            style={{
