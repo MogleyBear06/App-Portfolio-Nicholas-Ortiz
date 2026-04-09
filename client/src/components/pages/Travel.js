@@ -40,7 +40,7 @@ export default function Travel() {
     <div className="container" 
     style={{ 
       marginTop:'2.70vmin',
-      marginBottom:'5vmin',
+      marginBottom:'2vmin',
       }}> 
          <img src={NMCasual} alt=""
            style={{

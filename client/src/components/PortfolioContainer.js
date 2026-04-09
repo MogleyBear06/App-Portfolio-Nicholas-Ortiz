@@ -21,7 +21,7 @@ export default function PortfolioContainer() {
   };
   
   return (
-    <div>
+    <div className="app-container">
       {/* <Header currentPage={currentPage} handlePageChange={handlePageChange} /> */}
       {/* <Video/> */}
       <Routes>

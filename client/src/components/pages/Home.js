@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import mainimg from "../../assets/main2.jpeg";
 
+
 export default function Home() {
   const [showBottom, setShowBottom] = useState(false);
 
@@ -17,7 +18,7 @@ export default function Home() {
     style={{
           marginTop: '7%',
           
-          minHeight: '70vh',
+         
         }}
   >
    <img src={mainimg} alt=""
