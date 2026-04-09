@@ -33,15 +33,7 @@ export default function Home() {
         }}
    />
 
-   <div
-    style={{
-          
-          marginBottom: '7%',
-         
-        }}
-   >
-
-   
+   <div>
    <div
   className="d-flex justify-content-center"
   style={{
