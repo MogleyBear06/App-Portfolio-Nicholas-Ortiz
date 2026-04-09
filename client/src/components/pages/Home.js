@@ -16,8 +16,8 @@ export default function Home() {
   <div
     style={{
           marginTop: '7%',
-          marginBottom: '7%',
-          minHeight: '100vh',
+          
+          minHeight: '80vh',
         }}
   >
    <img src={mainimg} alt=""
