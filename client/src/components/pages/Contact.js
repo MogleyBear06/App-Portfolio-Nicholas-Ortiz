@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 // import { validateEmail } from "../utlls/helpers";
+import mainimg from "../../assets/main2.jpeg";
 
 function Contact() {
   const [formState, setFormState] = useState({
@@ -82,6 +83,17 @@ function Contact() {
       ) : (
         <>
       <div className='container d-flex justify-content-center'> 
+           <img src={mainimg} alt=""
+             style={{
+                  position: 'fixed',
+                  top: 0,
+                  left: 0,
+                  width: '100%',
+                  height: '100%',
+                  objectFit: 'cover',
+                  zIndex: -1,
+                }}
+           />
       <div className='container' style={{ maxWidth: "95vmin"}}>
       <div className='row align-items-center'>
       <div> 

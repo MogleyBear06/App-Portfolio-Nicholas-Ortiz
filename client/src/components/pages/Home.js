@@ -113,7 +113,7 @@ export default function Home() {
         color: "white"
       }}
     >
-      October 16, 2026
+      October 16th, 2026
     </h2>
   </div>
 </div>
@@ -154,42 +154,7 @@ export default function Home() {
     </h2>
   </div>
 </div>
-   <div
-  className="d-flex justify-content-center"
-  style={{
-    opacity: showBottom ? 1 : 0,
-    transition: "opacity 0.9s ease",
-    transitionDelay: "2.4s"
-  }}
->
-  <div
-    style={{
-      background: "rgba(96,85,61,0.7)",
-      backdropFilter: "blur(1px)",
-      WebkitBackdropFilter: "blur(5px)",
-      borderRadius: "30px",
-      padding: "0.2rem 0.6rem",
-          maskImage: `linear-gradient(to right, transparent, white 3%, white 90%, transparent), 
-                    linear-gradient(to bottom, transparent, white 20%, white 30%, transparent)`,
-        WebkitMaskImage: `linear-gradient(to right, transparent, white 2%, white 95%, transparent), 
-                          linear-gradient(to bottom, transparent, white 25%, white 60%, transparent)`,
-        maskComposite: 'intersect',
-        WebkitMaskComposite: 'source-in',
-    }}
-  >
-    <h2
-      style={{
-        margin: 0,
-        overflow: "hidden",
-        whiteSpace: "nowrap",
 
-        color: "white"
-      }}
-    >
-      Details coming Soon!
-    </h2>
-  </div>
-</div>
 </div>
 
    </div>

@@ -5,9 +5,11 @@ import Header from './Header';
 import Footer from './Footer';
 import CTA from './CalltoAction';
 import Home from './pages/Home';
-
-import About from './pages/About';
+import FAQ from './pages/FAQ';
+import Travel from './pages/Travel';
+import Venue from './pages/Venue';
 import Contact from './pages/Contact';
+import Registry from './pages/Registry';
 import Video from '../assets/vid';
 
 
@@ -25,13 +27,16 @@ export default function PortfolioContainer() {
       <Routes>
         <Route path="/" element={<Home />} />
 
-        {/* <Route path="/About" element={<About />} />
+        <Route path="/Venue" element={<Venue />} />
         <Route path="/Contact" element={<Contact />} />
+        <Route path="/Registry" element={<Registry />} />
+        <Route path="/FAQ" element={<FAQ />} />
+        <Route path="/Travel" element={<Travel />} />
         <Route path="/Header" element={<Header />} />
         <Route path="/Footer" element={<Footer />} />
-        <Route path="/CalltoAction" element={<CTA />} /> */}
+        <Route path="/CalltoAction" element={<CTA />} />
       </Routes>
-      {/* <Footer currentPage={currentPage} handlePageChange={handlePageChange} /> */}
+      <Footer currentPage={currentPage} handlePageChange={handlePageChange} />
     </div>
   );
 }
