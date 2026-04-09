@@ -110,7 +110,7 @@ export default function Registry() {
            0 0 5px rgba(243, 174, 61, 0.6),
           0 0 10px rgba(243, 174, 61, 0.35)
         `, 
-            marginBottom: '15vmin',
+            marginBottom: '5vmin',
           }}>
             <p
             style={{ marginBottom: 0 }}
@@ -147,7 +147,7 @@ export default function Registry() {
       <img
         src={amazon}
         alt="Amazon Logo"
-        style={{ width: "100%", height: "auto", borderRadius: "12px", }}
+        style={{ width: "90%", height: "auto", borderRadius: "12px", }}
       />
     </a>
   </p>
@@ -163,7 +163,7 @@ export default function Registry() {
       <img
         src={honeyfund}
         alt="Honeyfund Logo"
-        style={{ width: "100%", height: "auto", borderRadius: "12px", }}
+        style={{ width: "90%", height: "auto", borderRadius: "12px", }}
       />
     </a>
   </p>
