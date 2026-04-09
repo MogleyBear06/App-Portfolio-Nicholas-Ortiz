@@ -114,7 +114,7 @@ export default function FAQ() {
             marginBottom: '2vmin',
           }}>
             <h3><strong>How do I rsvp and what is the deadline? </strong></h3>
-            <p>
+            <p style={{ marginBottom: 0 }}>
              <strong>COMING SOON:</strong> You’ll receive login credentials (username and password) with your mailed invitation. At that point you may log on via the “RSVP” page to submit your response.
             </p>
           </div>
@@ -137,7 +137,7 @@ export default function FAQ() {
             <p>
              While we love kids, this will be an adults-only event and we kindly ask that children under 18 stay home.
             </p>
-             <p>
+             <p style={{ marginBottom: 0 }}>
              Any plus-ones will be listed on your invitation and on your personal RSVP page when you log in to submit your RSVP. Unfortunately, we cannot accommodate additional guests or anyone not explicitly listed on your invitation.
             </p>
           </div>
@@ -158,7 +158,7 @@ export default function FAQ() {
             marginBottom: '2vmin',
           }}>
             <h3><strong>What time does the wedding start?  </strong></h3>
-            <p>
+            <p style={{ marginBottom: 0 }}>
              Doors will open to guests at 5:30 for a 6pm ceremony. A more detailed itinerary will be shared ahead of the wedding. 
             </p>
           </div>
@@ -179,7 +179,7 @@ export default function FAQ() {
             marginBottom: '2vmin',
           }}>
             <h3><strong>I have some dietary concerns. Will I be able to enjoy dinner?</strong></h3>
-            <p>
+            <p style={{ marginBottom: 0 }}>
              When you RSVP, a comment box will be available to make us aware of any dietary concerns and we’ll work to accommodate accordingly - we’re working with our caterer to provide a range of dietary options, and allergen information for our menu will be available on the day. 
             </p>
           </div>
@@ -200,7 +200,7 @@ export default function FAQ() {
             marginBottom: '2vmin',
           }}>
             <h3><strong>What is the dress code?</strong></h3>
-            <p>
+            <p style={{ marginBottom: 0 }}>
              The dress code for our wedding is Cocktail Attire: a semi-formal, polished, and elevated dress code sitting between Semi-Formal and Formal. This generally means a suit and tie with dress shoes, or a knee length or midi length dress with heels or dressy flats. Please feel free (but certainly not obligated) to lean into fall colors when choosing your ensemble.
             </p>
           </div>
@@ -221,7 +221,7 @@ export default function FAQ() {
             marginBottom: '2vmin',
           }}>
             <h3><strong>I have questions about the venue and transportation / parking logistics.</strong></h3>
-            <p>
+            <p style={{ marginBottom: 0 }}>
              Please refer to the “Venue” page to learn more about the Brodie Homestead and find details about arrival and parking.
             </p>
           </div>
@@ -241,7 +241,7 @@ export default function FAQ() {
             marginBottom: '2vmin',
           }}>
             <h3><strong>Is there a room block at a specific hotel? Do you have any recommendations on lodging or the best parts of town to stay in?</strong></h3>
-            <p>
+            <p style={{ marginBottom: 0 }}>
              We do not have a room block. Please refer to the “Travel” page for lodging recommendations.
             </p>
           </div>
@@ -262,7 +262,7 @@ export default function FAQ() {
             marginBottom: '2vmin',
           }}>
             <h3><strong>October 16th is a Friday…is that right?</strong></h3>
-            <p>
+            <p style={{ marginBottom: 0 }}>
              That’s right! We met on October 16th, 2021 and never looked back, so we figured our 5th anniversary was the perfect day to tie the knot! Plus, nobody will risk missing their favorite college football matchups on Saturday.
             </p>
           </div>
@@ -282,7 +282,7 @@ export default function FAQ() {
         `, 
           }}>
             <h3><strong>My question wasn’t answered here. What can I do?</strong></h3>
-           <p>
+           <p style={{ marginBottom: 0 }}>
   Please feel free to reach out to us directly via phone or email us at{" "}
   <a href="mailto:scottortizwedding@gmail.com">
     scottortizwedding@gmail.com

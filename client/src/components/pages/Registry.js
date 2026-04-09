@@ -112,7 +112,9 @@ export default function Registry() {
         `, 
             marginBottom: '15vmin',
           }}>
-            <p> If you would like to make a contribution, please visit our wedding registry at either <strong>Amazon</strong> or <strong>Honeyfund</strong> by selecting the links below
+            <p
+            style={{ marginBottom: 0 }}
+            > If you would like to make a contribution, please visit our wedding registry at either <strong>Amazon</strong> or <strong>Honeyfund</strong> by selecting the links below
             </p>
           </div>
 
@@ -135,7 +137,7 @@ export default function Registry() {
   }}
   >
     
-<div className="col-12 col-md-6 text-center">
+<div className="col-12 col-md-6 text-center hover-brighten">
   <p>
     <a
       href="https://www.amazon.com/wedding/share/scottortizwedding"
@@ -151,7 +153,7 @@ export default function Registry() {
   </p>
 </div>
 
-<div className="col-12 col-md-6 text-center">
+<div className="col-12 col-md-6 text-center hover-brighten">
   <p>
     <a
       href="https://www.honeyfund.com/site/scott-ortiz-10-16-2026"

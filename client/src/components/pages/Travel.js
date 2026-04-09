@@ -111,7 +111,7 @@ export default function Travel() {
           0 0 10px rgba(243, 174, 61, 0.35)
         `, 
           }}>
-            <p> Although we have not reserved a block of rooms at a nearby hotel, 
+            <p style={{ marginBottom: 0 }}> Although we have not reserved a block of rooms at a nearby hotel, 
               we have compiled a list of recommended accommodations suitable for the 
               occasion. The closest airport to Brodie Homestead is <strong>Austin Bergtstrom International (ABIA)</strong>.</p>
           </div>
@@ -176,7 +176,7 @@ export default function Travel() {
     </div>
 
     <div className="col-12 col-md-6 text-center">
-      <p>
+      <p style={{ marginBottom: 0 }}>
         <strong>Aloft Austin Southwest</strong><br />
         6731 Legado Ln<br />
         Austin, TX 78749<br />
@@ -247,7 +247,7 @@ export default function Travel() {
     </div>
 
     <div className="col-12 col-md-6 text-center">
-      <p>
+      <p style={{ marginBottom: 0 }}>
         <strong>Hotel ZaZa</strong><br />
         400 Lavaca St<br />
         Austin, TX 78701<br />

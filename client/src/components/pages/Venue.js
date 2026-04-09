@@ -112,7 +112,7 @@ export default function Venue() {
             padding: "15px",
           }}>
             <h2><strong>Brodie Homestead</strong></h2>
-            <p>
+            <p >
               “In 1949, the Brodie Homestead barn was built by John and Charlotte Weaver, who had 
               moved to the 280-acre homestead in 1945. The structure functioned as a barn for nearly 
               50 years, and was home to cattle, horses, and donkeys, among others. After an extensive 
@@ -122,7 +122,7 @@ export default function Venue() {
                additions, including the six stunning crystal chandeliers and the recycled maple floors.”  
             </p>
 
-                  <p>
+                  <p style={{ marginBottom: 0 }}>
               We know Texas weather can still be pretty warm in October, and is generally unpredictable. 
               The Ceremony and Reception will take place inside the air conditioned venue. Guest Arrival and 
               Cocktail Hour will be indoor/outdoor, but the option to be inside will always be available. 
@@ -192,7 +192,7 @@ export default function Venue() {
               There is overflow parking available in the adjacent shopping center. A parking map 
               will be shared ahead of the wedding.
             </p>
-            <p>
+            <p style={{ marginBottom: 0 }}>
              You may leave your car in the parking lot overnight if needed. However, the venue does not 
              have overnight security and is not responsible for your vehicle once our event ends. The 
              venue may require cars be moved by a certain time the next day or risk being towed, 
