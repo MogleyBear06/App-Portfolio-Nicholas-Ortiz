@@ -1,0 +1,262 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster+Two:ital@1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&family=Roboto&display=swap" rel="stylesheet');
+
+  body {
+    /* background: linear-gradient(rgb(39, 55, 77), rgb(82, 109, 130), rgb(157, 178, 191)); */
+    -webkit-text-fill-color: rgb(167, 156, 141) !important;
+    font-family: 'Roboto', sans-serif !important;
+   background-color: 'black' !important;
+    /* font-size: 2vmin !important; */
+        font-size: 4vmin !important;
+    margin: 0vw !important;
+    padding-top: 70px;
+}
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.app-container > *:not(footer) {
+  flex: 1;
+}
+
+h1 {
+  display: flex;
+  font-size: clamp(2.5rem, 7.82vw, 15.5rem) !important;
+font-family: 'Buongiorno Rastellino,'!important;
+  margin-bottom: 0pt;
+  -webkit-text-fill-color: rgb(236, 234, 231) !important;
+  
+}
+
+h2 {
+  display: flex;
+  font-size: clamp(1.7rem, 3vw, 2.1rem) !important;
+  font-family: 'Playfair Display', serif;
+  margin-bottom: 0pt;
+  -webkit-text-fill-color: rgb(236, 234, 231) !important;
+}
+
+h3 {
+  display: flex;
+  font-size: clamp(1.7rem, 3vw, 2.1rem) !important;
+  font-family: 'Playfair Display', serif;
+  margin-bottom: 0pt;
+  -webkit-text-fill-color: rgb(248, 240, 229) !important;
+}
+
+h4 {
+  display: flex;
+   font-size: clamp(1.3rem, 3.5vw, 2.25rem) !important;
+  font-family: 'Playfair Display', serif;
+  margin-bottom: 0pt;
+  -webkit-text-fill-color: rgb(248, 240, 229) !important;
+}
+
+h5 {
+  display: flex;
+  font-size: 2.5vmin;
+  font-family: 'Playfair Display', serif;
+  margin-bottom: 0pt;
+  -webkit-text-fill-color: rgb(248, 240, 229) !important;
+}
+
+
+p {
+  font-size: clamp(12px, 1.8vmax, 18px) !important;
+  -webkit-text-fill-color: rgb(248, 240, 229) !important;
+}
+
+input {
+   font-size: clamp(1.3rem, 2.7vw, 2rem) !important;
+  -webkit-text-fill-color: rgb(248, 240, 229) !important;
+}
+
+/* li {
+    font-size: clamp(12px, 1.8vmax, 18px) !important;
+  -webkit-text-fill-color: rgb(248, 240, 229) !important;
+} */
+
+span {
+     font-size: clamp(1rem, 2.5vw, 1.7rem) !important;
+  -webkit-text-fill-color: rgb(248, 240, 229) !important;
+}
+
+.error {
+  -webkit-text-fill-color: rgba(242, 255, 0, 0.71) !important;
+  font-size: clamp(12px, 1.8vmax, 18px) !important;
+  /* background: rgba(42, 34, 31, 0.8) !important; */
+  font-weight: bold !important;
+}
+
+/* span {
+   font-size: clamp(1.7rem, 3vw, 2.1rem) !important;
+  -webkit-text-fill-color: rgb(248, 240, 229) !important;
+} */
+
+/* .card {
+  transition: transform 0.5s ease-in-out;
+  background: rgb(37, 36, 36) !important;
+  -webkit-text-fill-color: rgb(248, 240, 229) !important;
+  border-style:ridge !important;
+  border-width: 1px;
+  border-color: rgb(248, 240, 229) !important;
+  font-size: 2vmin !important;
+} */
+
+.card.expanded {
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  background: rgb(37, 36, 36) !important;
+  border-style:ridge !important;
+  font-size: 2vmin !important;
+  min-width:35rem !important;
+  min-height: 30rem !important;
+}
+
+/* Your card */
+.card-body {
+  --angle: 0deg;
+  border: 3px solid transparent !important;   /* border thickness */
+  border-radius: 12px !important;
+
+  /* Layer 1 = inner fill (padding-box)
+     Layer 2 = animated ring (border-box) */
+  background:
+    linear-gradient(rgb(13, 11, 11), rgb(35, 30, 30)) padding-box,
+    conic-gradient(
+      from var(--angle),
+      black,
+     
+     
+      black
+    ) border-box !important;
+
+  /* animation: spin-angle 6s linear infinite !important; */
+  box-shadow: 0 0 10px rgb(38, 34, 34) !important;
+}
+/* .card-img {
+  max-width:10rem;
+  max-height:10rem;
+  margin: 5px; 
+  padding: 10px; 
+} */
+
+.card-app {
+  max-width:10rem;
+  max-height:10rem;
+  border-style: none !important;
+  
+}
+
+.carousel-indicators {
+  position: fixed;
+  top: 0; /* Adjust the top value as needed to position it vertically */
+  right: 0; /* Adjust the right value as needed to position it horizontally */
+  left: auto; /* Make sure left is set to 'auto' to override any Bootstrap default */
+  bottom: auto; /* Make sure bottom is set to 'auto' to override any Bootstrap default */
+}
+
+.list-group-item {
+  font-size: 2vmin !important;
+  -webkit-text-fill-color: rgb(248, 240, 229) !important;
+  background: rgb(67, 66, 66) !important;
+}
+
+.overlay-trigger-tooltip {
+  background: rgb(67, 66, 66) !important;
+}
+
+.centered-footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navbrand {
+  font-family: 'Playfair Display', serif;
+  margin-top: 1.5vmin !important;
+}
+
+.header {
+  background: rgb(25, 25, 25) !important;
+  max-height: 8vmin;
+}
+
+.nav-link{
+  -webkit-text-fill-color: rgb(248, 240, 229) !important;
+  /* background: rgb(25, 25, 25) !important; */
+}
+
+.navbar {
+  z-index: 1; 
+}
+
+.navbar-toggler {
+  margin-bottom: .5vmin;
+}
+
+.button {
+  background: rgb(67, 66, 66) !important;
+  border-color: rgb(248, 240, 229) !important;
+  border-style:ridge !important;
+}
+
+.contact-text {
+  -webkit-text-fill-color: rgb(67, 66, 66) !important;
+}
+
+.contact-form {
+  min-width:30rem !important;
+  min-height: 20rem !important;
+}
+
+
+
+/* .img-fluid {
+  min-width:12rem !important;
+  min-height: 12rem !important;
+} */
+
+/* .footer {
+  background: rgb(25, 25, 25) !important;
+  max-width: 100%;
+} */
+
+.hover-brighten {
+  transition:
+    filter 0.25s ease,
+    transform 0.25s cubic-bezier(0.4, 0, 0.2, 1),
+    text-shadow 0.25s ease
+  !important;
+
+  will-change: transform, filter;
+}
+
+.hover-brighten:hover {
+  filter: brightness(1.2) !important;
+  text-shadow: 0 0 2px rgba(179, 037, 025, 0.6) !important;
+  transform: translateY(-2px) scale(1.05) !important;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(5px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+@keyframes blink {
+  50% { border-color: transparent }
+}
+
+
+

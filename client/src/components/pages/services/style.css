@@ -1,0 +1,37 @@
+.main-container {
+    max-width: 90vmin;
+    min-height: 20vmin;
+    border: 3px groove silver;
+    margin: 0 auto; 
+    align-items: center;
+    display: flex;
+  }
+  
+  img {
+    max-width: 25vmin;
+    max-height: 25vmin;
+    height: auto;
+    margin-right: 5px;
+
+    
+}
+
+.intro {
+    max-width: 110vmin !important;
+}
+
+.featured {
+    max-width: 100vmin !important;
+}
+
+.header {
+    max-width: 110vmin !important;
+}
+  .p-container {
+    max-width: 30vmin;
+    max-height: 30vmin;
+    margin: 0 auto; 
+    margin-right: 5px;
+  }
+
+  

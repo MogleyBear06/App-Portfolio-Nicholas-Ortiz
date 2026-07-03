@@ -1,0 +1,24 @@
+[build]
+  command = "CI=false npm run build"
+  functions = "functions"
+  publish = "client/build"
+
+[build.environment]
+  NODE_VERSION = "18"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/search"
+  to = "https://bringme-adb2ba8d3a4a.herokuapp.com/search"
+  status = 200
+  force = true
+  headers = { X-From = "Netlify" }
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    Access-Control-Allow-Origin = "*"
