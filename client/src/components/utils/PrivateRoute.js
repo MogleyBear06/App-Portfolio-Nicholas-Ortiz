@@ -23,7 +23,7 @@ if (loading) {
     <div
       style={{
         minHeight: "100vh",
-        background: "lime"
+        background: "#2a2620"
       }}
     />
   );

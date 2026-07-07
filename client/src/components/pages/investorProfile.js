@@ -199,17 +199,22 @@ const currentUser = authUser;
     return <div>Error: {error}</div>;
   }
 
-  if (!isLoaded) {
-    return (
-      <div style={{ height:"100vh", marginTop: "30%", marginRight: "25%", marginLeft: "25%" }}>
-        <img src={mainimg} alt="" style={{ position: 'fixed', top: 0, left: 0, width: '100%', height: '100%', objectFit: 'cover', zIndex: -1 }} />
-        <Card style={{ textAlign: "center", background: "rgba(40, 39, 37, 0.7)", backdropFilter: "blur(1px)", WebkitBackdropFilter: "blur(5px)" }}>
-          <h1>Loading...</h1>
-        </Card>
-      </div>
-    );
-  }
-
+if (!isLoaded) {
+  return (
+    <div style={{ 
+      height: "100vh", 
+      marginTop: "30%", 
+      marginRight: "25%", 
+      marginLeft: "25%",
+      backgroundColor: "#2a2620" // fallback while img loads
+    }}>
+      <img src={mainimg} alt="" style={{ position: 'fixed', top: 0, left: 0, width: '100%', height: '100%', objectFit: 'cover', zIndex: -1 }} />
+      <Card style={{ textAlign: "center", background: "rgba(40, 39, 37, 0.7)", backdropFilter: "blur(1px)", WebkitBackdropFilter: "blur(5px)" }}>
+        <h1>Loading...</h1>
+      </Card>
+    </div>
+  );
+}
   if (isSubmitted) {
     return (
       <div style={{ marginTop: '10%', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '2rem' }}>
