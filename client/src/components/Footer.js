@@ -63,7 +63,7 @@ const navigate = useNavigate();
                 <h4 className='hover-brighten'>FAQ's</h4>
               </Nav.Link>
               <Nav.Link
-                onClick={() => { logout(); navigate('/RSVP'); }}
+                onClick={() => { logout(); navigate('/'); }}
                 style={{ flex: '0 0 auto', cursor: 'pointer' }}>
                 <h4 className='hover-brighten'>Logout</h4>
               </Nav.Link>
