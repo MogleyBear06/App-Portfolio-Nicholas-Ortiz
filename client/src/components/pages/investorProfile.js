@@ -208,8 +208,20 @@ if (!isLoaded) {
       marginLeft: "25%",
       backgroundColor: "#2a2620" // fallback while img loads
     }}>
-      <img src={mainimg} alt="" style={{ position: 'fixed', top: 0, left: 0, width: '100%', height: '100%', objectFit: 'cover', zIndex: -1 }} />
-      <Card style={{ textAlign: "center", background: "rgba(40, 39, 37, 0.7)", backdropFilter: "blur(1px)", WebkitBackdropFilter: "blur(5px)" }}>
+      <Card 
+      style={{ 
+        textAlign: "center", 
+                background: "rgba(89, 66, 56, 0.8)",
+            backdropFilter: "blur(1px)",
+            WebkitBackdropFilter: "blur(5px)",
+            borderRadius: "30px",
+             padding: "15px",
+             border: "1px solid rgba(255, 255, 255, 0.3)",
+            boxShadow: `
+           0 0 5px rgba(243, 174, 61, 0.6),
+          0 0 10px rgba(243, 174, 61, 0.35)
+        `,  
+        }}>
         <h1>Loading...</h1>
       </Card>
     </div>
