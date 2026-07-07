@@ -76,7 +76,7 @@ if (loading) {
                           <Nav.Link 
                             onClick={() => { 
 
-      navigate('/RSVP'); }}>
+      navigate('/Login'); }}>
     <h4 className='hover-brighten'>RSVP</h4>
   </Nav.Link>
                           </h2>

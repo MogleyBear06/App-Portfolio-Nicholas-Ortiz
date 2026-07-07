@@ -38,7 +38,7 @@ export default function PortfolioContainer() {
         <Route path="/FAQ" element={<PrivateRoute><FAQ /></PrivateRoute>} />
         <Route path="/Travel" element={<PrivateRoute><Travel /></PrivateRoute>} />
         <Route path="/Profile" element={<PrivateRoute><Profile /></PrivateRoute>} />
-        <Route path="/RSVP" element={<Login />} />
+        <Route path="/Login" element={<Login />} />
         <Route path="/Header" element={<Header />} />
         <Route path="/Footer" element={<Footer />} />
       </Routes>

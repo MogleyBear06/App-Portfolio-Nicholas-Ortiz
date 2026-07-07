@@ -318,5 +318,15 @@
     "email": "",
     "dietary": "",
     "password": "Dfranzese123"
+  },
+    {
+    "login": "GAntal",
+    "username": "Gaspar Antal",
+    "usernameattending": "",
+    "usernameguest": "Abel Antal",
+    "usernameguestattending": "",
+    "email": "",
+    "dietary": "",
+    "password": "GAntal123"
   }
 ]

@@ -22,6 +22,7 @@
   flex: 1;
 }
 
+
 h1 {
   display: flex;
   font-size: clamp(2.5rem, 7.82vw, 15.5rem) !important;

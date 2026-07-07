@@ -12,7 +12,7 @@ AWS.config.update({
 
 const dynamodb = new AWS.DynamoDB.DocumentClient();
 
-const USERS = JSON.parse(fs.readFileSync('./weddingpartyFinal.json', 'utf8'));
+const USERS = JSON.parse(fs.readFileSync('./guestListAdditional.json', 'utf8'));
 
 async function seedUsers() {
   for (const user of USERS) {
@@ -20,7 +20,7 @@ async function seedUsers() {
       const hashedPassword = await bcrypt.hash(user.password, 10);
 
       const params = {
-        TableName: 'WeddingParty',
+        TableName: 'Users',
         Item: {
           userId: uuidv4(),
           login: user.login,

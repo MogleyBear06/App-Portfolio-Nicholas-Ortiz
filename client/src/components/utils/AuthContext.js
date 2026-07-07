@@ -10,11 +10,19 @@ export const AuthProvider = ({ children }) => {
   const [loading, setLoading] = useState(true);
 
   // Check localStorage for a valid token on mount
-  useEffect(() => {
-    const currentUser = authService.loggedIn(); // returns {userId, email} or null
+useEffect(() => {
+  const currentUser = authService.loggedIn();
+  setUser(currentUser);
+  setLoading(false);
+
+  const handleAuthChange = () => {
+    const currentUser = authService.loggedIn();
     setUser(currentUser);
-    setLoading(false);
-  }, []);
+  };
+
+  window.addEventListener('auth-change', handleAuthChange);
+  return () => window.removeEventListener('auth-change', handleAuthChange);
+}, []);
 
     // 👇 THIS is the magic login bridge
   // useEffect(() => {
