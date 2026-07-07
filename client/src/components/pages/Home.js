@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
 import mainimg from "../../assets/main2.jpeg";
+import HeroBackground from "../HeroBackground";
+
 
 
 export default function Home() {
@@ -11,6 +13,7 @@ export default function Home() {
     return () => clearTimeout(t);
   }, []);
 
+const CF_BASE = "https://d3duw5o0obopn7.cloudfront.net";
 
   return (
     <>
@@ -22,17 +25,7 @@ export default function Home() {
          
         }}
   >
-   <img src={mainimg} alt=""
-     style={{
-          position: 'fixed',
-          top: 0,
-          left: 0,
-          width: '100%',
-          height: '100%',
-          objectFit: 'cover',
-          zIndex: -1,
-        }}
-   />
+ <HeroBackground image="main2.jpeg" bgColor="#2a2620" />
 
    <div>
    <div

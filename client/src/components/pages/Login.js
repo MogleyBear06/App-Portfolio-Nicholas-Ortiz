@@ -6,6 +6,7 @@ import { useAuth } from '../utils/AuthContext';
 import { FaEye, FaEyeSlash } from 'react-icons/fa';
 import mainimg from "../../assets/main2.jpeg";
 import loginImg from "../../assets/login.jpg";
+import HeroBackground from "../HeroBackground";
 
 function Login(props) {
   const [formState, setFormState] = useState({ login: '', password: '' });
@@ -94,20 +95,12 @@ const { login } = useAuth();
     }
   };
 
+  const CF_BASE = "https://d3duw5o0obopn7.cloudfront.net";
+
   return (
     <div 
     >
-         <img src={mainimg} alt=""
-           style={{
-                position: 'fixed',
-                top: 0,
-                left: 0,
-                width: '100%',
-                height: '100%',
-                objectFit: 'cover',
-                zIndex: -1,
-              }}
-         />
+ <HeroBackground image="main2.jpeg" bgColor="#2a2620" />
 
 <div
   className="d-flex justify-content-center"

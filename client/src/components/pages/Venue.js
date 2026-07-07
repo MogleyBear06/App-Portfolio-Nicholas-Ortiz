@@ -5,6 +5,7 @@ import outsideclose from '../../assets/outsideclose.jpeg';
 import outsidewide from '../../assets/outsidewide.jpeg';
 import chandelier from '../../assets/chandelier.jpeg';
 import { Carousel } from "bootstrap";
+import HeroBackground from "../HeroBackground";
 
 
 export default function Venue() {
@@ -42,17 +43,7 @@ export default function Venue() {
       marginTop:'2.70vmin',
       
       }}> 
-         <img src={maininterior} alt=""
-           style={{
-                position: 'fixed',
-                top: 0,
-                left: 0,
-                width: '100%',
-                height: '100%',
-                objectFit: 'cover',
-                zIndex: -1,
-              }}
-         />
+ <HeroBackground image="maininterior.jpeg" bgColor="#2a2620" />
     <div className='container'>
          <div
   className="d-flex justify-content-center"

@@ -6,6 +6,7 @@ import honeyfund from '../../assets/honeyfund.jpeg';
 import hands from '../../assets/hands.JPG';
 import chandelier from '../../assets/chandelier.jpeg';
 import { Carousel } from "bootstrap";
+import HeroBackground from "../HeroBackground";
 
 
 export default function Registry() {
@@ -43,17 +44,7 @@ export default function Registry() {
       marginTop:'2.70vmin',
       
       }}> 
-         <img src={hands} alt=""
-           style={{
-                position: 'fixed',
-                top: 0,
-                left: 0,
-                 width: "100vw",
-                height: "100vh",
-                objectFit: 'cover',
-                zIndex: -1,
-              }}
-         />
+ <HeroBackground image="hands.JPG" bgColor="#2a2620" />
     <div className='container'>
          <div
   className="d-flex justify-content-center"

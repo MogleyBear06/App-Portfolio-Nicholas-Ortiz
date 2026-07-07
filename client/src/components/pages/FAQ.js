@@ -5,6 +5,7 @@ import dock from '../../assets/dock.JPG';
 import outsidewide from '../../assets/outsidewide.jpeg';
 import chandelier from '../../assets/chandelier.jpeg';
 import { Carousel } from "bootstrap";
+import HeroBackground from "../HeroBackground";
 
 
 export default function FAQ() {
@@ -43,17 +44,7 @@ export default function FAQ() {
       marginTop:'2.70vmin',
       
       }}> 
-         <img src={dock} alt=""
-           style={{
-                position: 'fixed',
-                top: 0,
-                left: 0,
-                width: '100%',
-                height: '100%',
-                objectFit: 'cover',
-                zIndex: -1,
-              }}
-         />
+ <HeroBackground image="dock.JPG" bgColor="#2a2620" />
     <div className='container'>
          <div
   className="d-flex justify-content-center"
