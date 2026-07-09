@@ -351,7 +351,7 @@ if (!isLoaded) {
                     flexDirection: isSmallScreen ? 'column' : 'row',
                     alignItems: 'center', 
                     justifyContent: 'center', // 👈 add this
-                    gap: '0.5rem', 
+                    // gap: '0.5rem', 
                     flexWrap: 'wrap' }}>
                     <h2 style={{ color: 'black', margin: 0 }}>{formState.username}</h2>
                     <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
