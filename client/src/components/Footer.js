@@ -33,46 +33,62 @@ const navigate = useNavigate();
 
   return (
     <Navbar className="d-flex justify-content-center">
-      <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', width: '100%' }}>
-        <Nav className="mr-auto align-items-center">
+      <div style={{
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center',
+        width: '100%',
+        maxWidth: '100%',
+        boxSizing: 'border-box',
+        padding: '0 20px'
+      }}>
+        <Nav
+          className="mr-auto align-items-center"
+          style={{
+            flexWrap: 'wrap',
+            justifyContent: 'center',
+            rowGap: '1px',
+            width: '100%'
+          }}
+        >
           {user ? (
             <>
               <Nav.Link
                 onClick={() => { handlePageChange('Profile'); navigate('/Profile'); }}
-                className={currentPage === 'Profile' ? 'nav-link active' : 'nav-link'} style={{flex: '0 0 auto'}}>
-                <h4 className='hover-brighten'>My RSVP</h4>
+                className={currentPage === 'Profile' ? 'nav-link active' : 'nav-link'} style={{flex: '0 1 auto'}}>
+                <h2 className='hover-brighten'>My RSVP</h2>
               </Nav.Link>
               <Nav.Link
                 onClick={() => { handlePageChange('Venue'); navigate('/Venue'); }}
-                className={currentPage === 'Venue' ? 'nav-link active' : 'nav-link'} style={{flex: '0 0 auto'}}>
-                <h4 className='hover-brighten'>Venue</h4>
+                className={currentPage === 'Venue' ? 'nav-link active' : 'nav-link'} style={{flex: '0 1 auto'}}>
+                <h2 className='hover-brighten'>Venue</h2>
               </Nav.Link>
               <Nav.Link
                 onClick={() => { handlePageChange('Travel'); navigate('/Travel'); }}
-                className={currentPage === 'Travel' ? 'nav-link active' : 'nav-link'} style={{flex: '0 0 auto'}}>
-                <h4 className='hover-brighten'>Travel</h4>
+                className={currentPage === 'Travel' ? 'nav-link active' : 'nav-link'} style={{flex: '0 1 auto'}}>
+                <h2 className='hover-brighten'>Travel</h2>
               </Nav.Link>
               <Nav.Link
                 onClick={() => { handlePageChange('Registry'); navigate('/Registry'); }}
-                className={currentPage === 'Registry' ? 'nav-link active' : 'nav-link'} style={{flex: '0 0 auto'}}>
-                <h4 className='hover-brighten'>Registry</h4>
+                className={currentPage === 'Registry' ? 'nav-link active' : 'nav-link'} style={{flex: '0 1 auto'}}>
+                <h2 className='hover-brighten'>Registry</h2>
               </Nav.Link>
               <Nav.Link
                 onClick={() => { handlePageChange('FAQ'); navigate('/FAQ'); }}
-                className={currentPage === 'FAQ' ? 'nav-link active' : 'nav-link'} style={{flex: '0 0 auto'}}>
-                <h4 className='hover-brighten'>FAQ's</h4>
+                className={currentPage === 'FAQ' ? 'nav-link active' : 'nav-link'} style={{flex: '0 1 auto'}}>
+                <h2 className='hover-brighten'>FAQ's</h2>
               </Nav.Link>
               <Nav.Link
                 onClick={() => { logout(); navigate('/'); }}
-                style={{ flex: '0 0 auto', cursor: 'pointer' }}>
-                <h4 className='hover-brighten'>Logout</h4>
+                style={{ flex: '0 1 auto', cursor: 'pointer' }}>
+                <h2 className='hover-brighten'>Logout</h2>
               </Nav.Link>
             </>
           ) : (
             <Nav.Link href="/Login"
               onClick={() => handlePageChange('Login')}
-              className={currentPage === 'Login' ? 'nav-link active' : 'nav-link'} style={{ flex: '0 0 auto' }}>
-              <h4 className='hover-brighten'>RSVP</h4>
+              className={currentPage === 'Login' ? 'nav-link active' : 'nav-link'} style={{ flex: '0 1 auto' }}>
+              <h2 className='hover-brighten'>RSVP</h2>
             </Nav.Link>
           )}
         </Nav>

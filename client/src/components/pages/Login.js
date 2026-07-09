@@ -405,10 +405,7 @@ const { login } = useAuth();
               </Button>
             </div>
           )}
- 
-
-          {/* Forgot Password Button */}
-          {!forgotPassword && (
+          {/* {!forgotPassword && (
             <div className="forgot-password-button d-flex justify-content-center col-12 ">
               <Button className="hover-brighten"
                 onClick={() => setForgotPassword(true)}
@@ -419,7 +416,16 @@ const { login } = useAuth();
                <h3>Forgot Password?</h3>
               </Button>
             </div>
-          )}
+          )} */}
+          <div
+          style={{
+            textAlign: 'center',
+          }}
+          >
+              <p>
+            Please note, username and password are case sensitive.
+          </p>
+          </div>
         </Card>
       </form>
     </div>

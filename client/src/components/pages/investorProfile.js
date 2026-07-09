@@ -5,6 +5,7 @@ import { useNavigate } from "react-router-dom";
 import mainimg from "../../assets/main2.jpeg";
 import update from "../../assets/update.jpg";
 import cancel from "../../assets/cancel.jpg";
+import HeroBackground from "../HeroBackground";
 
 
 function InvestorProfile() {
@@ -203,11 +204,12 @@ if (!isLoaded) {
   return (
     <div style={{ 
       height: "100vh", 
-      marginTop: "30%", 
+      marginTop: "10%", 
       marginRight: "25%", 
       marginLeft: "25%",
-      backgroundColor: "#2a2620" // fallback while img loads
+      // backgroundColor: "#2a2620" 
     }}>
+       <HeroBackground image="main2.jpeg" bgColor="#2a2620" />
       <Card 
       style={{ 
         textAlign: "center", 
@@ -229,8 +231,17 @@ if (!isLoaded) {
 }
   if (isSubmitted) {
     return (
-      <div style={{ marginTop: '10%', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '2rem' }}>
-        <img src={mainimg} alt="" style={{ position: 'fixed', top: 0, left: 0, width: '100%', height: '100%', objectFit: 'cover', zIndex: -1 }} />
+      <div 
+      style={{ 
+        marginTop: '10%', 
+         marginLeft: '5%',
+              marginRight: '5%',
+        display: 'flex', 
+        flexDirection: 'column', 
+        alignItems: 'center', 
+        gap: '2rem',
+         }}>
+        <HeroBackground image="main2.jpeg" bgColor="#2a2620" />
         <div style={{
           background: "rgba(89, 66, 56, 0.8)",
           backdropFilter: "blur(1px)",
@@ -260,7 +271,7 @@ if (!isLoaded) {
 
   return (
     <div style={{ overflowX: 'hidden' }}>
-
+ <HeroBackground image="main2.jpeg" bgColor="#2a2620" />
       <div className="d-flex justify-content-center" style={{ opacity: showBottom ? 1 : 0, transition: "opacity 0.6s ease", transitionDelay: "0s" }}>
         <div style={{
           background: "rgba(89, 66, 56, 0.8)",
@@ -280,6 +291,7 @@ if (!isLoaded) {
       <div className="d-flex justify-content-center" style={{ opacity: showBottom ? 1 : 0, transition: "opacity 0.6s ease", transitionDelay: "0s" }}>
         <div style={{
           background: "rgba(89, 66, 56, 0.8)",
+          flexWrap: 'wrap',
           backdropFilter: "blur(1px)",
           WebkitBackdropFilter: "blur(5px)",
           borderRadius: "30px",
@@ -295,7 +307,7 @@ if (!isLoaded) {
 
       <>
         <>
-          <img src={mainimg} alt="" style={{ position: 'fixed', top: 0, left: 0, width: '100%', height: '100%', objectFit: 'cover', zIndex: -1 }} />
+
           <div>
             <div style={{
               background: "rgba(89, 66, 56, 0.8)",
@@ -320,7 +332,17 @@ if (!isLoaded) {
                 </div>
 
                 {/* Primary guest wedding attendance */}
-                <div style={{ borderRadius: "30px", padding: "0.2rem 0.6rem", display: 'flex', flexWrap: 'wrap', alignItems: 'center', justifyContent: 'space-between', gap: '1rem' }}>
+                <div style={{
+                  borderRadius: "30px",
+                  padding: "0.2rem 0.6rem",
+                  display: 'flex',
+                  flexWrap: 'wrap',
+                  flexDirection: isSmallScreen ? 'column' : 'row',
+                  alignItems: 'center',
+                  justifyContent: isSmallScreen ? 'center' : 'space-between',
+                  gap: '1rem',
+                  textAlign: isSmallScreen ? 'center' : 'left',
+                }}>
                   <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', flexWrap: 'wrap' }}>
                     <h2 style={{ color: 'black', margin: 0 }}>{formState.username}</h2>
                     <div style={{ display: 'flex', justifyContent: 'left', alignItems: 'center' }}>
@@ -349,7 +371,17 @@ if (!isLoaded) {
 
                 {/* Guest wedding attendance */}
                 {formState.usernameguest && (
-                  <div style={{ borderRadius: "30px", padding: "0.2rem 0.6rem", display: 'flex', flexWrap: 'wrap', alignItems: 'center', justifyContent: 'space-between', gap: '1rem' }}>
+                 <div style={{
+                    borderRadius: "30px",
+                    padding: "0.2rem 0.6rem",
+                    display: 'flex',
+                    flexWrap: 'wrap',
+                    flexDirection: isSmallScreen ? 'column' : 'row',
+                    alignItems: 'center',
+                    justifyContent: isSmallScreen ? 'center' : 'space-between',
+                    gap: '1rem',
+                    textAlign: isSmallScreen ? 'center' : 'left',
+                  }}>
                     <h2 style={{ color: 'black', margin: 0 }}>{formState.usernameguest}</h2>
                     {isEditing ? (
                       <div style={{ display: 'flex', gap: '0.5rem', flexWrap: 'wrap' }}>
@@ -383,7 +415,17 @@ if (!isLoaded) {
                     </div>
 
                     {/* Primary guest rehearsal attendance */}
-                    <div style={{ borderRadius: "30px", padding: "0.2rem 0.6rem", display: 'flex', flexWrap: 'wrap', alignItems: 'center', justifyContent: 'space-between', gap: '1rem' }}>
+                   <div style={{
+                      borderRadius: "30px",
+                      padding: "0.2rem 0.6rem",
+                      display: 'flex',
+                      flexWrap: 'wrap',
+                      flexDirection: isSmallScreen ? 'column' : 'row',
+                      alignItems: 'center',
+                      justifyContent: isSmallScreen ? 'center' : 'space-between',
+                      gap: '1rem',
+                      textAlign: isSmallScreen ? 'center' : 'left',
+                    }}>
                       <h2 style={{ color: 'black', margin: 0 }}>{formState.username}</h2>
                       {isEditing ? (
                         <div style={{ display: 'flex', gap: '0.5rem', flexWrap: 'wrap' }}>
@@ -408,7 +450,17 @@ if (!isLoaded) {
                 {rehearsalError && <p className='error'>{rehearsalError}</p>}
 
                 {formState.source === 'WeddingParty' && formState.usernameguest && (
-                  <div style={{ borderRadius: "30px", padding: "0.2rem 0.6rem", display: 'flex', flexWrap: 'wrap', alignItems: 'center', justifyContent: 'space-between', gap: '1rem' }}>
+                 <div style={{
+                    borderRadius: "30px",
+                    padding: "0.2rem 0.6rem",
+                    display: 'flex',
+                    flexWrap: 'wrap',
+                    flexDirection: isSmallScreen ? 'column' : 'row',
+                    alignItems: 'center',
+                    justifyContent: isSmallScreen ? 'center' : 'space-between',
+                    gap: '1rem',
+                    textAlign: isSmallScreen ? 'center' : 'left',
+                  }}>
                     <h2 style={{ color: 'black', margin: 0 }}>{formState.usernameguest}</h2>
                     {isEditing ? (
                       <div style={{ display: 'flex', gap: '0.5rem', flexWrap: 'wrap' }}>
@@ -434,7 +486,7 @@ if (!isLoaded) {
 
               <div style={{ border: "1px solid rgba(255, 255, 255, 0.3)", boxShadow: `0 0 5px rgba(243, 174, 61, 0.6), 0 0 10px rgba(243, 174, 61, 0.35)`, height: '4px', background: 'rgba(255, 255, 255, 0.5)', margin: '1.5rem auto', width: '80%', borderRadius: '2px' }} />
 
-              <div className="d-flex" style={{ opacity: showBottom ? 1 : 0, transition: "opacity 0.6s ease", transitionDelay: "0s", marginBottom: '2%', justifyContent: 'center' }}>
+              <div className="d-flex" style={{ opacity: showBottom ? 1 : 0, transition: "opacity 0.6s ease", transitionDelay: "0s", marginBottom: '2%', justifyContent: 'center',  textAlign: isSmallScreen ? 'center' : 'left', }}>
                 <div style={{ marginBottom: '1rem' }}>
                   <h2 style={{ margin: 0, justifyContent: 'center', alignItems: 'center' }}>Reminder</h2>
                   <h2 style={{ margin: 0, justifyContent: 'center', alignItems: 'center' }}>We cannot accommodate additional guests or children.</h2>
@@ -444,8 +496,8 @@ if (!isLoaded) {
 
               <div style={{ border: "1px solid rgba(255, 255, 255, 0.3)", boxShadow: `0 0 5px rgba(243, 174, 61, 0.6), 0 0 10px rgba(243, 174, 61, 0.35)`, height: '4px', background: 'rgba(255, 255, 255, 0.5)', margin: '1.5rem auto', width: '80%', borderRadius: '2px' }} />
 
-              <Card style={{ display: 'block', marginBottom: '2%', width: 'auto', height: 'auto', boxSizing: 'border-box', background: "none", border: 'none', padding: "0.2rem 0.6rem" }}>
-                <div className="d-flex" style={{ opacity: showBottom ? 1 : 0, transition: "opacity 0.6s ease", transitionDelay: "0s" }}>
+              <Card style={{ display: 'block', marginBottom: '2%', width: 'auto', height: 'auto', boxSizing: 'border-box', background: "none", border: 'none', padding: "0.2rem 0.6rem",  textAlign: isSmallScreen ? 'center' : 'left', }}>
+                <div className="d-flex" style={{ opacity: showBottom ? 1 : 0, transition: "opacity 0.6s ease", transitionDelay: "0s", paddingBottom: '1rem' }}>
                   <div>
                     <h2 style={{ margin: 0 }}>Best Email contact for wedding related updates</h2>
                   </div>
@@ -475,8 +527,8 @@ if (!isLoaded) {
 
               <div style={{ border: "1px solid rgba(255, 255, 255, 0.3)", boxShadow: `0 0 5px rgba(243, 174, 61, 0.6), 0 0 10px rgba(243, 174, 61, 0.35)`, height: '4px', background: 'rgba(255, 255, 255, 0.5)', margin: '1.5rem auto', width: '80%', borderRadius: '2px' }} />
 
-              <Card style={{ display: 'block', marginBottom: '2%', width: 'auto', height: 'auto', boxSizing: 'border-box', background: "none", padding: "0.2rem 0.6rem", border: 'none' }}>
-                <div className="d-flex" style={{ opacity: showBottom ? 1 : 0, transition: "opacity 0.6s ease", transitionDelay: "0s" }}>
+              <Card style={{ display: 'block', marginBottom: '2%', width: 'auto', height: 'auto', boxSizing: 'border-box', background: "none", padding: "0.2rem 0.6rem", border: 'none',  textAlign: isSmallScreen ? 'center' : 'left', }}>
+                <div className="d-flex" style={{ opacity: showBottom ? 1 : 0, transition: "opacity 0.6s ease", transitionDelay: "0s", paddingBottom: '1rem' }}>
                   <div>
                     <h2 style={{ margin: 0 }}>Dietary Restrictions or Food Allergies (optional)</h2>
                   </div>

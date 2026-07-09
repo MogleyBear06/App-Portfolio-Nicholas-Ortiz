@@ -46,7 +46,8 @@ if (loading) {
               }}
          />
 
-        <Card
+<div style={{ marginTop: '10%', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '2rem' }}>
+    <Card
           className=' container col-10 col-md-6 justify-content-center'
             style={{
       background: "rgba(89, 66, 56, 0.8)",
@@ -70,17 +71,20 @@ if (loading) {
             }
           </h2>
                 
-                        <h2 className='container col-12 justify-content-center'
-                        style={{ textAlign: 'center',}}
-                        >
-                          <Nav.Link 
-                            onClick={() => { 
-
+        <h2 className='container col-12 justify-content-center'
+          style={{ 
+            textAlign: 'center',
+            textDecoration: 'underline',
+          }}
+            >
+          <Nav.Link 
+        onClick={() => { 
       navigate('/Login'); }}>
-    <h4 className='hover-brighten'>RSVP</h4>
+    <h2 className='hover-brighten'>Login to My RSVP</h2>
   </Nav.Link>
                           </h2>
         </Card>
+</div>
       </div>
     );
   }

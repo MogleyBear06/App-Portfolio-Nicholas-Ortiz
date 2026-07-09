@@ -1,10 +1,17 @@
-// components/HeroBackground.js
-import React, { useState } from "react";
+import React, { useState, useRef, useEffect } from "react";
 
 const CF_BASE = "https://d3duw5o0obopn7.cloudfront.net";
 
 export default function HeroBackground({ image, bgColor = "#2a2620" }) {
+  const imgRef = useRef(null);
   const [imgLoaded, setImgLoaded] = useState(false);
+
+  useEffect(() => {
+    // If the image is already cached, `.complete` will be true immediately
+    if (imgRef.current && imgRef.current.complete) {
+      setImgLoaded(true);
+    }
+  }, [image]);
 
   return (
     <>
@@ -20,6 +27,7 @@ export default function HeroBackground({ image, bgColor = "#2a2620" }) {
         }}
       />
       <img
+        ref={imgRef}
         src={`${CF_BASE}/${image}`}
         alt=""
         onLoad={() => setImgLoaded(true)}
@@ -32,7 +40,7 @@ export default function HeroBackground({ image, bgColor = "#2a2620" }) {
           objectFit: 'cover',
           zIndex: -1,
           opacity: imgLoaded ? 1 : 0,
-          transition: 'opacity 0.4s ease',
+          transition: imgLoaded ? 'none' : 'opacity 0.4s ease', // no fade if already loaded
         }}
       />
     </>

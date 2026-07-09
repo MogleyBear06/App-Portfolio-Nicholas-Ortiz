@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Route, Routes } from 'react-router-dom';
 import "../components/style/global.css"
+import PersistentBackground from "./PersistentBackground";
 import Header from './Header';
 import Footer from './Footer';
 import CTA from './CalltoAction';
@@ -31,6 +32,7 @@ export default function PortfolioContainer() {
     <div className="app-container">
       <AuthProvider> 
         <Provider store={store}>
+          
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/Venue" element={<PrivateRoute><Venue /></PrivateRoute>} />

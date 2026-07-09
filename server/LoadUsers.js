@@ -20,7 +20,7 @@ async function seedUsers() {
       const hashedPassword = await bcrypt.hash(user.password, 10);
 
       const params = {
-        TableName: 'Users',
+        TableName: 'WeddingParty',
         Item: {
           userId: uuidv4(),
           login: user.login,
