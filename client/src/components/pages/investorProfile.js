@@ -350,7 +350,15 @@ if (!isLoaded) {
                     </div>
                   </div>
                   {isEditing ? (
-                    <div style={{ display: 'flex', gap: '0.5rem', flexWrap: 'wrap' }}>
+                     <div style={{
+                      display: 'flex',
+                      flexDirection: isSmallScreen ? 'column' : 'row',
+                      gap: '0.5rem',
+                      flexWrap: 'wrap',
+                      justifyContent: 'center',
+                      alignItems: 'center',
+                      width: isSmallScreen ? '100%' : 'auto',
+                    }}>
                       <div onClick={() => setFormState(prev => ({ ...prev, usernameattending: true }))} style={{ padding: '0.4rem 1.2rem', borderRadius: '30px', cursor: 'pointer', border: '1px solid rgba(255,255,255,0.3)', background: formState.usernameattending === true || formState.usernameattending === 'true' ? 'rgba(0, 180, 0, 0.6)' : 'rgba(255,255,255,0.1)', color: 'white', boxShadow: formState.usernameattending === true || formState.usernameattending === 'true' ? '0 0 8px rgba(0,255,0,0.4)' : 'none', transition: 'all 0.2s ease' }}>
                         <h2 style={{ margin: 0 }}>Attending</h2>
                       </div>
@@ -384,7 +392,15 @@ if (!isLoaded) {
                   }}>
                     <h2 style={{ color: 'black', margin: 0 }}>{formState.usernameguest}</h2>
                     {isEditing ? (
-                      <div style={{ display: 'flex', gap: '0.5rem', flexWrap: 'wrap' }}>
+                       <div style={{
+                        display: 'flex',
+                        flexDirection: isSmallScreen ? 'column' : 'row',
+                        gap: '0.5rem',
+                        flexWrap: 'wrap',
+                        justifyContent: 'center',
+                        alignItems: 'center',
+                        width: isSmallScreen ? '100%' : 'auto',
+                      }}>
                         <div onClick={() => setFormState(prev => ({ ...prev, usernameguestattending: true }))} style={{ padding: '0.4rem 1.2rem', borderRadius: '30px', cursor: 'pointer', border: '1px solid rgba(255,255,255,0.3)', background: formState.usernameguestattending === true || formState.usernameguestattending === 'true' ? 'rgba(0, 180, 0, 0.6)' : 'rgba(255,255,255,0.1)', color: 'white', boxShadow: formState.usernameguestattending === true || formState.usernameguestattending === 'true' ? '0 0 8px rgba(0,255,0,0.4)' : 'none', transition: 'all 0.2s ease' }}>
                           <h2 style={{ margin: 0 }}>Attending</h2>
                         </div>
@@ -428,7 +444,15 @@ if (!isLoaded) {
                     }}>
                       <h2 style={{ color: 'black', margin: 0 }}>{formState.username}</h2>
                       {isEditing ? (
-                        <div style={{ display: 'flex', gap: '0.5rem', flexWrap: 'wrap' }}>
+                        <div style={{
+                          display: 'flex',
+                          flexDirection: isSmallScreen ? 'column' : 'row',
+                          gap: '0.5rem',
+                          flexWrap: 'wrap',
+                          justifyContent: 'center',
+                          alignItems: 'center',
+                          width: isSmallScreen ? '100%' : 'auto',
+                        }}>
                           <div onClick={() => setFormState(prev => ({ ...prev, usernameattendingrehearsal: true }))} style={{ padding: '0.4rem 1.2rem', borderRadius: '30px', cursor: 'pointer', border: '1px solid rgba(255,255,255,0.3)', background: formState.usernameattendingrehearsal === true || formState.usernameattendingrehearsal === 'true' ? 'rgba(0, 180, 0, 0.6)' : 'rgba(255,255,255,0.1)', color: 'white', boxShadow: formState.usernameattendingrehearsal === true || formState.usernameattendingrehearsal === 'true' ? '0 0 8px rgba(0,255,0,0.4)' : 'none', transition: 'all 0.2s ease' }}>
                             <h2 style={{ margin: 0 }}>Attending</h2>
                           </div>
@@ -463,7 +487,15 @@ if (!isLoaded) {
                   }}>
                     <h2 style={{ color: 'black', margin: 0 }}>{formState.usernameguest}</h2>
                     {isEditing ? (
-                      <div style={{ display: 'flex', gap: '0.5rem', flexWrap: 'wrap' }}>
+                       <div style={{
+                          display: 'flex',
+                          flexDirection: isSmallScreen ? 'column' : 'row',
+                          gap: '0.5rem',
+                          flexWrap: 'wrap',
+                          justifyContent: 'center',
+                          alignItems: 'center',
+                          width: isSmallScreen ? '100%' : 'auto',
+                        }}>
                         <div onClick={() => setFormState(prev => ({ ...prev, usernameguestattendingrehearsal: true }))} style={{ padding: '0.4rem 1.2rem', borderRadius: '30px', cursor: 'pointer', border: '1px solid rgba(255,255,255,0.3)', background: formState.usernameguestattendingrehearsal === true || formState.usernameguestattendingrehearsal === 'true' ? 'rgba(0, 180, 0, 0.6)' : 'rgba(255,255,255,0.1)', color: 'white', boxShadow: formState.usernameguestattendingrehearsal === true || formState.usernameguestattendingrehearsal === 'true' ? '0 0 8px rgba(0,255,0,0.4)' : 'none', transition: 'all 0.2s ease' }}>
                           <h2 style={{ margin: 0 }}>Attending</h2>
                         </div>
