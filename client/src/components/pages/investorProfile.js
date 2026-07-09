@@ -448,7 +448,7 @@ if (!isLoaded) {
                       flexDirection: isSmallScreen ? 'column' : 'row',
                       alignItems: 'center',
                       justifyContent: isSmallScreen ? 'center' : 'space-between',
-                      gap: '1rem',
+                      gap: '.7rem',
                       textAlign: isSmallScreen ? 'center' : 'left',
                       marginBottom: '1rem',
                     }}>
