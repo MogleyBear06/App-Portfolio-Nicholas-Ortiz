@@ -346,9 +346,15 @@ if (!isLoaded) {
                   textAlign: isSmallScreen ? 'center' : 'left',
                   marginBottom: '1rem',
                 }}>
-                  <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', flexWrap: 'wrap' }}>
+                  <div style={{ 
+                    display: 'flex', 
+                    flexDirection: isSmallScreen ? 'column' : 'row',
+                    alignItems: 'center', 
+                    justifyContent: 'center', // 👈 add this
+                    gap: '0.5rem', 
+                    flexWrap: 'wrap' }}>
                     <h2 style={{ color: 'black', margin: 0 }}>{formState.username}</h2>
-                    <div style={{ display: 'flex', justifyContent: 'left', alignItems: 'center' }}>
+                    <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
                       <h2 style={{ margin: 0, padding: 0, borderRadius: "30px", padding: "0.2rem 0.6rem" }}>{formState.position}</h2>
                     </div>
                   </div>
