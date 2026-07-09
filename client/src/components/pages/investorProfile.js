@@ -292,6 +292,8 @@ if (!isLoaded) {
         <div style={{
           background: "rgba(89, 66, 56, 0.8)",
           flexWrap: 'wrap',
+          marginLeft: '5%',
+          marginRight: '5%',
           backdropFilter: "blur(1px)",
           WebkitBackdropFilter: "blur(5px)",
           borderRadius: "30px",
@@ -596,7 +598,7 @@ if (!isLoaded) {
       </>
 
       {AuthService.loggedIn() && (
-        <Card className="p-4" style={{ marginBottom: '5%', marginRight: '25%', marginLeft: '25%', width: 'auto', display: 'block', overflow: 'hidden', boxSizing: 'border-box', background: "none" }}>
+        <Card className="p-4" style={{ marginBottom: '5%', marginRight: '25%', marginLeft: '25%', width: 'auto', display: 'block', overflow: 'hidden', boxSizing: 'border-box', border: 'none', background: "none" }}>
           <div className="row gy-4">
             {isEditing && (
               <div className='col col-md-6 col-lg-6 d-flex flex-column'>
