@@ -40,6 +40,10 @@ h2 {
   -webkit-text-fill-color: rgb(236, 234, 231) !important;
 }
 
+h2.rsvp-date-heading {
+  font-size: clamp(1rem, 3vw, 2.1rem) !important;
+}
+
 h3 {
   display: flex;
   font-size: clamp(1.7rem, 3vw, 2.1rem) !important;
