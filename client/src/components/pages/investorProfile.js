@@ -303,7 +303,7 @@ if (!isLoaded) {
           maskComposite: 'intersect',
           WebkitMaskComposite: 'source-in',
         }}>
-          <h2 style={{ margin: 0, overflow: "hidden", whiteSpace: "nowrap", width: "0", animation: "typing 2.5s ease-out forwards", color: "white" }}>Please RSVP by September 16th, 2026</h2>
+          <h2 style={{ margin: 0, overflow: "hidden", whiteSpace: "normal", width: "0", animation: "typing 2.5s ease-out forwards", color: "white", }}>Please RSVP by September 16th, 2026</h2>
         </div>
       </div>
 
