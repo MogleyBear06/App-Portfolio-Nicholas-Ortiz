@@ -344,6 +344,7 @@ if (!isLoaded) {
                   justifyContent: isSmallScreen ? 'center' : 'space-between',
                   gap: '1rem',
                   textAlign: isSmallScreen ? 'center' : 'left',
+                  marginBottom: '1rem',
                 }}>
                   <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', flexWrap: 'wrap' }}>
                     <h2 style={{ color: 'black', margin: 0 }}>{formState.username}</h2>
@@ -443,6 +444,7 @@ if (!isLoaded) {
                       justifyContent: isSmallScreen ? 'center' : 'space-between',
                       gap: '1rem',
                       textAlign: isSmallScreen ? 'center' : 'left',
+                      marginBottom: '1rem',
                     }}>
                       <h2 style={{ color: 'black', margin: 0 }}>{formState.username}</h2>
                       {isEditing ? (
