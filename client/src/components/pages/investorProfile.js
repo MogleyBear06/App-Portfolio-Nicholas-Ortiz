@@ -526,15 +526,17 @@ if (!isLoaded) {
                       </div>
                     )}
                   </div>
+                
                 )}
                 {guestRehearsalError && <p className='error'>{guestRehearsalError}</p>}
-                  <div style={{ marginBottom: '1rem',marginTop: '1rem', textAlign: isSmallScreen ? 'center' : 'left' }}>
-                      <h2 style={{ margin: 0, justifyContent: 'center', alignItems: 'center' }}>
-                        Please note: the wedding rehearsal is for wedding party members only.
-                        Wedding party guests will be able to attend the rehearsal dinner afterwards.
-                      </h2>
-                   
-                    </div>
+               {formState.source === 'WeddingParty' && (
+                  <div style={{ marginBottom: '1rem', marginTop: '1rem', textAlign: isSmallScreen ? 'center' : 'left' }}>
+                    <h2 style={{ margin: 0, justifyContent: 'center', alignItems: 'center' }}>
+                      Please note: the wedding rehearsal is for wedding party members only.
+                      Wedding party guests will be able to attend the rehearsal dinner afterwards.
+                    </h2>
+                  </div>
+                )}
               </div>
 
               <div style={{ border: "1px solid rgba(255, 255, 255, 0.3)", boxShadow: `0 0 5px rgba(243, 174, 61, 0.6), 0 0 10px rgba(243, 174, 61, 0.35)`, height: '4px', background: 'rgba(255, 255, 255, 0.5)', margin: '1.5rem auto', width: '80%', borderRadius: '2px' }} />
