@@ -61,7 +61,7 @@ const currentUser = authUser;
     }
     try {
       const token = AuthService.getToken(); 
-      const response = await fetch(`https://wedding-dek9.onrender.com/rsvp/${authUser?.userId}`, {
+      const response = await fetch(`http://localhost:3003/rsvp/${authUser?.userId}`, {
         headers: {
           'Authorization': `Bearer ${token}`,
         },
@@ -157,7 +157,7 @@ const currentUser = authUser;
     formData.append('usernameguestattendingrehearsal', formState.usernameguestattendingrehearsal);
 
     try {
-      const response = await fetch(`https://wedding-dek9.onrender.com/rsvp/${userId}`, {
+      const response = await fetch(`http://localhost:3003/rsvp/${userId}`, {
         method: 'PUT',
         body: formData,
       });
@@ -256,7 +256,7 @@ if (!isLoaded) {
         }}>
           <h1 style={{ color: 'white', justifyContent: 'center' }}>RSVP Status</h1>
           <h3 style={{ color: 'silver', justifyContent: 'center' }}>Thank you for submitting your RSVP!</h3>
-          <h3 style={{ color: 'silver', justifyContent: 'center' }}>Changes may be made until September 16th, 2026 by clicking below:</h3>
+          <h3 style={{ color: 'silver', justifyContent: 'center' }}>Changes may be made until September 16th, 2026 by clicking below</h3>
           <Button
             className="process-card-text hover-brighten"
             style={{ background: 'none', color: 'silver', border: 'none', borderRadius: '5px', padding: '0.5rem 2rem', cursor: 'pointer' }}
@@ -290,19 +290,20 @@ if (!isLoaded) {
 
       <div className="d-flex justify-content-center" style={{ opacity: showBottom ? 1 : 0, transition: "opacity 0.6s ease", transitionDelay: "0s" }}>
         <div style={{
-          background: "rgba(89, 66, 56, 0.8)",
-          flexWrap: 'wrap',
-          marginLeft: '5%',
-          marginRight: '5%',
-          backdropFilter: "blur(1px)",
-          WebkitBackdropFilter: "blur(5px)",
-          borderRadius: "30px",
-          padding: "0.2rem 0.6rem",
-          maskImage: `linear-gradient(to right, transparent, white 3%, white 90%, transparent), linear-gradient(to bottom, transparent, white 20%, white 30%, transparent)`,
-          WebkitMaskImage: `linear-gradient(to right, transparent, white 2%, white 95%, transparent), linear-gradient(to bottom, transparent, white 25%, white 60%, transparent)`,
-          maskComposite: 'intersect',
-          WebkitMaskComposite: 'source-in',
-        }}>
+              background: "rgba(89, 66, 56, 0.8)",
+              backdropFilter: "blur(1px)",
+              WebkitBackdropFilter: "blur(5px)",
+              marginBottom: '2%',
+              marginLeft: '5%',
+              marginRight: '5%',
+              borderRadius: "30px",
+              padding: "15px",
+              border: "1px solid rgba(255, 255, 255, 0.3)",
+              boxSizing: 'border-box',
+              maxWidth: '90%',
+              overflowX: 'hidden',
+              boxShadow: `0 0 5px rgba(243, 174, 61, 0.6), 0 0 10px rgba(243, 174, 61, 0.35)`,
+            }}>
           <h2 className="rsvp-date-heading" style={{ margin: 0, overflow: "hidden", whiteSpace: "nowrap", width: "0", animation: "typing 2.5s ease-out forwards", color: "white", }}>Please RSVP by September 16th, 2026</h2>
         </div>
       </div>
@@ -331,6 +332,7 @@ if (!isLoaded) {
                 <div style={{ marginBottom: '1rem' }}>
                   <h2 style={{ margin: 0, justifyContent: 'center', alignItems: 'center' }}>Wedding</h2>
                   <h2 style={{ margin: 0, justifyContent: 'center', alignItems: 'center' }}>Friday, October 16th, 2026</h2>
+                  <h2 style={{ margin: 0, justifyContent: 'center', alignItems: 'center' }}>6:30-11:00PM</h2>
                 </div>
 
                 {/* Primary guest wedding attendance */}
@@ -435,8 +437,10 @@ if (!isLoaded) {
                   <>
                     <div style={{ border: "1px solid rgba(255, 255, 255, 0.3)", boxShadow: `0 0 5px rgba(243, 174, 61, 0.6), 0 0 10px rgba(243, 174, 61, 0.35)`, height: '4px', background: 'rgba(255, 255, 255, 0.5)', margin: '1.5rem auto', width: '80%', borderRadius: '2px' }} />
                     <div style={{ marginBottom: '1rem' }}>
-                      <h2 style={{ margin: 0, justifyContent: 'center', alignItems: 'center' }}>Rehearsal Dinner</h2>
+                      <h2 style={{ margin: 0, justifyContent: 'center', alignItems: 'center' }}>Rehearsal</h2>
                       <h2 style={{ margin: 0, justifyContent: 'center', alignItems: 'center' }}>Thursday, October 15th, 2026</h2>
+                      <h2 style={{ margin: 0, justifyContent: 'center', alignItems: 'center' }}>Wedding Rehearsal: 2:30-3:30PM</h2>
+                      <h2 style={{ margin: 0, justifyContent: 'center', alignItems: 'center' }}>Rehearsal Dinner: 6:30-8:30PM</h2>
                     </div>
 
                     {/* Primary guest rehearsal attendance */}
@@ -524,6 +528,13 @@ if (!isLoaded) {
                   </div>
                 )}
                 {guestRehearsalError && <p className='error'>{guestRehearsalError}</p>}
+                  <div style={{ marginBottom: '1rem',marginTop: '1rem', textAlign: isSmallScreen ? 'center' : 'left' }}>
+                      <h2 style={{ margin: 0, justifyContent: 'center', alignItems: 'center' }}>
+                        Please note: the wedding rehearsal is for wedding party members only.
+                        Wedding party guests will be able to attend the rehearsal dinner afterwards.
+                      </h2>
+                   
+                    </div>
               </div>
 
               <div style={{ border: "1px solid rgba(255, 255, 255, 0.3)", boxShadow: `0 0 5px rgba(243, 174, 61, 0.6), 0 0 10px rgba(243, 174, 61, 0.35)`, height: '4px', background: 'rgba(255, 255, 255, 0.5)', margin: '1.5rem auto', width: '80%', borderRadius: '2px' }} />
