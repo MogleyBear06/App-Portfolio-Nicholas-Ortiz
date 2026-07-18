@@ -61,7 +61,7 @@ const currentUser = authUser;
     }
     try {
       const token = AuthService.getToken(); 
-      const response = await fetch(`http://localhost:3003/rsvp/${authUser?.userId}`, {
+      const response = await fetch(`https://wedding-dek9.onrender.com/rsvp/${authUser?.userId}`, {
         headers: {
           'Authorization': `Bearer ${token}`,
         },
@@ -157,7 +157,7 @@ const currentUser = authUser;
     formData.append('usernameguestattendingrehearsal', formState.usernameguestattendingrehearsal);
 
     try {
-      const response = await fetch(`http://localhost:3003/rsvp/${userId}`, {
+      const response = await fetch(`https://wedding-dek9.onrender.com/rsvp/${userId}`, {
         method: 'PUT',
         body: formData,
       });
