@@ -203,11 +203,11 @@ if (!isLoaded) {
       marginLeft: "25%",
       // backgroundColor: "#2a2620" 
     }}>
-<HeroBackgroundVideo video="RSVPBG1.mp4" bgImage="bg.jpeg" bgColor="#2a2620" isSmallScreen={isSmallScreen} />
+<HeroBackgroundVideo video="RSVPBG3.mp4" bgImage="bg.jpeg" bgColor="#2a2620" isSmallScreen={isSmallScreen} />
       <Card 
       style={{ 
         textAlign: "center", 
-                background: "rgba(89, 66, 56, 0.8)",
+                background: "#2a2620",
             backdropFilter: "blur(1px)",
             WebkitBackdropFilter: "blur(5px)",
             borderRadius: "30px",
@@ -236,7 +236,7 @@ if (!isLoaded) {
         gap: '2rem',
          }}>
      <HeroBackgroundVideo
-  video="RSVPBG1.mp4"
+  video="RSVPBG3.mp4"
   bgImage="bg.jpeg"
   bgColor="#2a2620"
   isSmallScreen={isSmallScreen}
@@ -272,7 +272,7 @@ if (!isLoaded) {
   return (
     <div style={{ overflowX: 'hidden' }}>
 <HeroBackgroundVideo
-  video="RSVPBG1.mp4"
+  video="RSVPBG3.mp4"
   bgImage="bg.jpeg"
   bgColor="#2a2620"
   isSmallScreen={isSmallScreen}
