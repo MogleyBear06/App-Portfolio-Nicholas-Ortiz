@@ -207,7 +207,7 @@ if (!isLoaded) {
       <Card 
       style={{ 
         textAlign: "center", 
-                background: "#2a2620",
+            background: "rgba(89, 66, 56, 0.8)",
             backdropFilter: "blur(1px)",
             WebkitBackdropFilter: "blur(5px)",
             borderRadius: "30px",
