@@ -42,53 +42,64 @@ const navigate = useNavigate();
         boxSizing: 'border-box',
         padding: '0 20px'
       }}>
-        <Nav
-          className="mr-auto align-items-center"
-          style={{
-            flexWrap: 'wrap',
-            justifyContent: 'center',
-            rowGap: '1px',
-            width: '100%'
-          }}
-        >
+<Nav
+  className="mr-auto align-items-center"
+  style={{
+    flexWrap: 'wrap',
+    justifyContent: 'center',
+    rowGap: '1px',
+    width: 'fit-content',
+    maxWidth: '100%',
+    margin: '0 auto',
+    background: "rgba(89, 66, 56, 0.8)",
+    backdropFilter: "blur(1px)",
+    WebkitBackdropFilter: "blur(5px)",
+    borderRadius: "30px",
+    maskImage: `linear-gradient(to right, transparent, white 3%, white 95%, transparent), linear-gradient(to bottom, transparent, white 10%, white 80%, transparent)`,
+    WebkitMaskImage: `linear-gradient(to right, transparent, white 2%, white 95%, transparent), linear-gradient(to bottom, transparent, white 20%, white 80%, transparent)`,
+    maskComposite: 'intersect',
+    WebkitMaskComposite: 'source-in',
+  }}
+>
           {user ? (
             <>
               <Nav.Link
                 onClick={() => { handlePageChange('Profile'); navigate('/Profile'); }}
                 className={currentPage === 'Profile' ? 'nav-link active' : 'nav-link'} style={{flex: '0 1 auto'}}>
-                <h2 className='hover-brighten'>My RSVP</h2>
+                <h2 className='hover-brighten nav-heading'
+                >My RSVP</h2>
               </Nav.Link>
               <Nav.Link
                 onClick={() => { handlePageChange('Venue'); navigate('/Venue'); }}
                 className={currentPage === 'Venue' ? 'nav-link active' : 'nav-link'} style={{flex: '0 1 auto'}}>
-                <h2 className='hover-brighten'>Venue</h2>
+                <h2 className='hover-brighten nav-heading'>Venue</h2>
               </Nav.Link>
               <Nav.Link
                 onClick={() => { handlePageChange('Travel'); navigate('/Travel'); }}
                 className={currentPage === 'Travel' ? 'nav-link active' : 'nav-link'} style={{flex: '0 1 auto'}}>
-                <h2 className='hover-brighten'>Travel</h2>
+                <h2 className='hover-brighten nav-heading'>Travel</h2>
               </Nav.Link>
               <Nav.Link
                 onClick={() => { handlePageChange('Registry'); navigate('/Registry'); }}
                 className={currentPage === 'Registry' ? 'nav-link active' : 'nav-link'} style={{flex: '0 1 auto'}}>
-                <h2 className='hover-brighten'>Registry</h2>
+                <h2 className='hover-brighten nav-heading'>Registry</h2>
               </Nav.Link>
               <Nav.Link
                 onClick={() => { handlePageChange('FAQ'); navigate('/FAQ'); }}
                 className={currentPage === 'FAQ' ? 'nav-link active' : 'nav-link'} style={{flex: '0 1 auto'}}>
-                <h2 className='hover-brighten'>FAQ's</h2>
+                <h2 className='hover-brighten nav-heading'>FAQ's</h2>
               </Nav.Link>
               <Nav.Link
                 onClick={() => { logout(); navigate('/'); }}
                 style={{ flex: '0 1 auto', cursor: 'pointer' }}>
-                <h2 className='hover-brighten'>Logout</h2>
+                <h2 className='hover-brighten nav-heading'>Logout</h2>
               </Nav.Link>
             </>
           ) : (
             <Nav.Link href="/Login"
               onClick={() => handlePageChange('Login')}
               className={currentPage === 'Login' ? 'nav-link active' : 'nav-link'} style={{ flex: '0 1 auto' }}>
-              <h2 className='hover-brighten'>RSVP</h2>
+              <h2 className='hover-brighten nav-heading'>RSVP</h2>
             </Nav.Link>
           )}
         </Nav>

@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import NMCasual from '../../assets/NMCasual.JPG';
 import maininterior from '../../assets/maininterior.jpeg';
 import dock from '../../assets/dock.JPG';
@@ -105,9 +106,13 @@ export default function FAQ() {
             marginBottom: '2vmin',
           }}>
             <h3><strong>How do I rsvp and what is the deadline? </strong></h3>
-            <p style={{ marginBottom: 0 }}>
-             Please RSVP by September 16th, 2026. You can RSVP here. If you have any questions please feel free to reach out to us directly at scottortizwedding@gmail.com.
-            </p>
+          <p style={{ marginBottom: 0 }}>
+  Please RSVP by September 16th, 2026. You can RSVP{' '}
+  <Link to="/Profile" style={{ color: 'inherit', textDecoration: 'underline' }}>
+    here
+  </Link>
+  . If you have any questions please feel free to reach out to us directly at scottortizwedding@gmail.com.
+</p>
           </div>
                <div className='container align-items-center'
           style={{

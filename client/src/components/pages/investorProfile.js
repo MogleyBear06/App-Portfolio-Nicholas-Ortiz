@@ -6,6 +6,7 @@ import mainimg from "../../assets/main2.jpeg";
 import update from "../../assets/update.jpg";
 import cancel from "../../assets/cancel.jpg";
 import HeroBackground from "../HeroBackground";
+import HeroBackgroundVideo from "../HeroBackgroundVideo";
 
 
 function InvestorProfile() {
@@ -31,12 +32,10 @@ const currentUser = authUser;
 
   const [cardVisible, setCardVisible] = useState(false);
 
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setCardVisible(true);
-    }, 500);
-    return () => clearTimeout(timer);
-  }, []);
+useEffect(() => {
+  const t = setTimeout(() => setShowBottom(true), 3800); // was 300 — tune to match video length
+  return () => clearTimeout(t);
+}, []);
 
   const [formState, setFormState] = useState({ 
     userId: '',
@@ -175,11 +174,6 @@ const currentUser = authUser;
   };
 
   useEffect(() => {
-    const t = setTimeout(() => setShowBottom(true), 300);
-    return () => clearTimeout(t);
-  }, []);
-
-  useEffect(() => {
     const handleResize = () => {
       setIsSmallScreen(window.innerWidth < 768);
     };
@@ -209,11 +203,11 @@ if (!isLoaded) {
       marginLeft: "25%",
       // backgroundColor: "#2a2620" 
     }}>
-       <HeroBackground image="main2.jpeg" bgColor="#2a2620" />
+<HeroBackgroundVideo video="RSVPBG1.mp4" bgImage="bg.jpeg" bgColor="#2a2620" isSmallScreen={isSmallScreen} />
       <Card 
       style={{ 
         textAlign: "center", 
-                background: "rgba(89, 66, 56, 0.8)",
+                background: "rgba(225, 219, 216, 0.8)",
             backdropFilter: "blur(1px)",
             WebkitBackdropFilter: "blur(5px)",
             borderRadius: "30px",
@@ -241,9 +235,15 @@ if (!isLoaded) {
         alignItems: 'center', 
         gap: '2rem',
          }}>
-        <HeroBackground image="main2.jpeg" bgColor="#2a2620" />
+     <HeroBackgroundVideo
+  video="RSVPBG1.mp4"
+  bgImage="bg.jpeg"
+  bgColor="#2a2620"
+  isSmallScreen={isSmallScreen}
+/>
         <div style={{
           background: "rgba(89, 66, 56, 0.8)",
+          opacity: showBottom ? 1 : 0, transition: "opacity 0.6s ease", transitionDelay: ".3s", 
           backdropFilter: "blur(1px)",
           borderRadius: "30px",
           padding: "15px",
@@ -271,7 +271,12 @@ if (!isLoaded) {
 
   return (
     <div style={{ overflowX: 'hidden' }}>
- <HeroBackground image="main2.jpeg" bgColor="#2a2620" />
+<HeroBackgroundVideo
+  video="RSVPBG1.mp4"
+  bgImage="bg.jpeg"
+  bgColor="#2a2620"
+  isSmallScreen={isSmallScreen}
+/>
       <div className="d-flex justify-content-center" style={{ opacity: showBottom ? 1 : 0, transition: "opacity 0.6s ease", transitionDelay: "0s" }}>
         <div style={{
           background: "rgba(89, 66, 56, 0.8)",
@@ -288,7 +293,7 @@ if (!isLoaded) {
         </div>
       </div>
 
-      <div className="d-flex justify-content-center" style={{ opacity: showBottom ? 1 : 0, transition: "opacity 0.6s ease", transitionDelay: "0s" }}>
+      <div className="d-flex justify-content-center" style={{ opacity: showBottom ? 1 : 0, transition: "opacity 0.6s ease", transitionDelay: ".2s" }}>
         <div style={{
               background: "rgba(89, 66, 56, 0.8)",
               backdropFilter: "blur(1px)",
@@ -316,6 +321,7 @@ if (!isLoaded) {
               background: "rgba(89, 66, 56, 0.8)",
               backdropFilter: "blur(1px)",
               WebkitBackdropFilter: "blur(5px)",
+              opacity: showBottom ? 1 : 0, transition: "opacity 0.6s ease", transitionDelay: ".3s", 
               marginBottom: '2%',
               marginLeft: '5%',
               marginRight: '5%',

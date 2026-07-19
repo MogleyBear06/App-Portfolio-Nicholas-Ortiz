@@ -44,6 +44,14 @@ h2.rsvp-date-heading {
   font-size: clamp(1.3rem, 3vw, 2.1rem) !important;
 }
 
+/* h2.nav-heading {
+  font-weight: 1000 !important;
+  font-size: clamp(1.9rem, 3.2vw, 2.4rem) !important;
+  -webkit-text-fill-color: #2a2620 !important;
+  -webkit-text-stroke: .5px silver;
+  text-stroke: 1px silver;
+} */
+
 h3 {
   display: flex;
   font-size: clamp(1.7rem, 3vw, 2.1rem) !important;
