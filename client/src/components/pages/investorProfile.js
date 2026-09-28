@@ -78,8 +78,6 @@ useEffect(() => {
       setIsLoaded(true);
       if (data.usernameattending !== null && data.usernameattending !== undefined) {
         setIsSubmitted(true);
-      } else {
-        setIsEditing(true);
       }
     } catch (error) {
       console.error('Error fetching data:', error);
@@ -223,51 +221,6 @@ if (!isLoaded) {
     </div>
   );
 }
-  if (isSubmitted) {
-    return (
-      <div 
-      style={{ 
-        marginTop: '10%', 
-         marginLeft: '5%',
-              marginRight: '5%',
-        display: 'flex', 
-        flexDirection: 'column', 
-        alignItems: 'center', 
-        gap: '2rem',
-         }}>
-     <HeroBackgroundVideo
-  video="RSVPBG3.mp4"
-  bgImage="bg.jpeg"
-  bgColor="#2a2620"
-  isSmallScreen={isSmallScreen}
-/>
-        <div style={{
-          background: "rgba(89, 66, 56, 0.8)",
-          opacity: showBottom ? 1 : 0, transition: "opacity 0.6s ease", transitionDelay: ".3s", 
-          backdropFilter: "blur(1px)",
-          borderRadius: "30px",
-          padding: "15px",
-          textAlign: 'center',
-          border: "1px solid rgba(255, 255, 255, 0.3)",
-          boxShadow: `
-         0 0 5px rgba(243, 174, 61, 0.6),
-        0 0 10px rgba(243, 174, 61, 0.35)
-      `, 
-        }}>
-          <h1 style={{ color: 'white', justifyContent: 'center' }}>RSVP Status</h1>
-          <h3 style={{ color: 'silver', justifyContent: 'center' }}>Thank you for submitting your RSVP!</h3>
-          <h3 style={{ color: 'silver', justifyContent: 'center' }}>Changes may be made until September 16th, 2026 by clicking below</h3>
-          <Button
-            className="process-card-text hover-brighten"
-            style={{ background: 'none', color: 'silver', border: 'none', borderRadius: '5px', padding: '0.5rem 2rem', cursor: 'pointer' }}
-            onClick={() => { setIsSubmitted(false); setOriginalData(formState); setIsEditing(true); }}
-          >
-            <img src={update} alt="" style={{ width: "100px", borderRadius: "30px", display: "block", border: "1px solid rgba(255, 255, 255, 0.3)", boxShadow: `0 0 5px rgba(243, 174, 61, 0.6), 0 0 10px rgba(243, 174, 61, 0.35)` }} />
-          </Button>
-        </div>
-      </div>
-    );
-  }
 
   return (
     <div style={{ overflowX: 'hidden' }}>
@@ -309,7 +262,7 @@ if (!isLoaded) {
               overflowX: 'hidden',
               boxShadow: `0 0 5px rgba(243, 174, 61, 0.6), 0 0 10px rgba(243, 174, 61, 0.35)`,
             }}>
-          <h2 className="rsvp-date-heading" style={{ margin: 0, overflow: "hidden", whiteSpace: "nowrap", width: "0", animation: "typing 2.5s ease-out forwards", color: "white", }}>Please RSVP by September 16th, 2026</h2>
+          <h2 className="rsvp-date-heading" style={{ margin: 0, overflow: "hidden", whiteSpace: "nowrap", width: "0", animation: "typing 2.5s ease-out forwards", color: "white", }}>RSVPs are now closed</h2>
         </div>
       </div>
 
@@ -623,43 +576,6 @@ if (!isLoaded) {
           </div>
         </>
       </>
-
-      {AuthService.loggedIn() && (
-        <Card className="p-4" style={{ marginBottom: '5%', marginRight: '25%', marginLeft: '25%', width: 'auto', display: 'block', overflow: 'hidden', boxSizing: 'border-box', border: 'none', background: "none" }}>
-          <div className="row gy-4">
-            {isEditing && (
-              <div className='col col-md-6 col-lg-6 d-flex flex-column'>
-                <Button
-                  className="process-card-text hover-brighten"
-                  style={{ display: 'block', height: 'auto', width: 'auto', margin: '5px auto', fontSize: '2.5vmin', background: 'none', color: '#fff', border: 'none', borderRadius: '5px', cursor: 'pointer', textAlign: 'center' }}
-                  onClick={handleSaveChanges}
-                >
-                  <img src={update} alt="" style={{ width: "100px", borderRadius: "30px", display: "block", border: "1px solid rgba(255, 255, 255, 0.3)", boxShadow: `0 0 5px rgba(243, 174, 61, 0.6), 0 0 10px rgba(243, 174, 61, 0.35)` }} />
-                </Button>
-              </div>
-            )}
-            {canEdit && (
-              <div className={`col d-flex flex-column ${!isEditing ? 'col-12' : 'col-md-6 col-lg-6'}`}>
-                <Button
-                  className="process-card-text hover-brighten"
-                  style={{ display: 'block', height: 'auto', width: 'auto', margin: '5px auto', fontSize: '2.5vmin', background: 'none', border: 'none', borderRadius: '5px', cursor: 'pointer', textAlign: 'center' }}
-                  onClick={() => {
-                    if (isEditing) {
-                      setFormState(originalData);
-                    } else {
-                      setOriginalData(formState);
-                    }
-                    setIsEditing((prev) => !prev);
-                  }}
-                  disabled={!canEdit}
-                >
-                  <img src={isEditing ? cancel : update} alt="" style={{ width: "100px", borderRadius: "30px", display: "block", border: "1px solid rgba(255, 255, 255, 0.3)", boxShadow: `0 0 5px rgba(243, 174, 61, 0.6), 0 0 10px rgba(243, 174, 61, 0.35)` }} />
-                </Button>
-              </div>
-            )}
-          </div>
-        </Card>
-      )}
     </div>
   );
 }
