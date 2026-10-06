@@ -11,6 +11,7 @@ import Travel from './pages/Travel';
 import Venue from './pages/Venue';
 import Contact from './pages/Contact';
 import Registry from './pages/Registry';
+import Allergens from './pages/AllergenInfo';
 import Video from '../assets/vid';
 import Login from './pages/Login.js';
 import Profile from './pages/investorProfile.js';
@@ -43,6 +44,7 @@ export default function PortfolioContainer() {
         <Route path="/Login" element={<Login />} />
         <Route path="/Header" element={<Header />} />
         <Route path="/Footer" element={<Footer />} />
+        <Route path="/Allergens" element={<Allergens />} />
       </Routes>
       <Footer currentPage={currentPage} handlePageChange={handlePageChange} />
       </Provider>
